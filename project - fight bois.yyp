@@ -207,6 +207,14 @@
             }
         },
         {
+            "Key": "72ae173a-fbc3-40eb-8ab3-fe2a1093aed4",
+            "Value": {
+                "id": "d4c780ed-95a3-472c-a37c-a110e4f4cd33",
+                "resourcePath": "scripts\\FighterTakeDamage\\FighterTakeDamage.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "80340177-7c51-4a05-80c1-9af501420610",
             "Value": {
                 "id": "22baf159-e9a3-48e6-a845-e36c336b976b",
@@ -319,6 +327,14 @@
             }
         },
         {
+            "Key": "e81213e1-3f9f-4b5c-99dd-51b991030abc",
+            "Value": {
+                "id": "86ddee14-3cdb-4f18-a4ff-5897a794bbb2",
+                "resourcePath": "scripts\\FighterCreateDamage\\FighterCreateDamage.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "e920eb5b-535a-4ebb-96a1-966950080ec2",
             "Value": {
                 "id": "7764851d-1726-401e-8857-33d7a0b26cd1",
@@ -374,7 +390,9 @@
         "9734d2a4-206f-48ef-8a6a-c6a0988425ed",
         "5b7f558d-4101-41c5-a917-1aa490b20ccd",
         "dc61bf92-1ab6-44d5-b7fd-ff5e4d767fff",
-        "ea25ecc8-7f6f-4920-90bc-f25e3ab0467d"
+        "ea25ecc8-7f6f-4920-90bc-f25e3ab0467d",
+        "72ae173a-fbc3-40eb-8ab3-fe2a1093aed4",
+        "e81213e1-3f9f-4b5c-99dd-51b991030abc"
     ],
     "tutorial": ""
 }

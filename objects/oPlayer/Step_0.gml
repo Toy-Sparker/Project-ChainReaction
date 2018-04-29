@@ -25,6 +25,12 @@ if(hsp < 0) image_xscale = -1;
 
 #endregion 
 
+#region Take Damage
+
+
+
+#endregion
+
 // Execute State
 script_execute(state);
 

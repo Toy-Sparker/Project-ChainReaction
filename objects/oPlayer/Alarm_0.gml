@@ -1,20 +1,19 @@
 /// @desc Create Damage
-if(state = FighterStickMovePunch) {
-	with(instance_create_layer(x + xx,y,"Damage",oDamage)) {
-		creator = other.id;
-		knockback_dir = sign(other.image_xscale);
-		knockback = 2;
-		image_xscale = 0.75;
-		image_yscale = 0.75;
-	}
-}
+if(state != FighterStickStep) {
 
-if(state = FighterStickMoveKick) {
-	with(instance_create_layer(x + xx,y + yy,"Damage",oDamage)) {
-		creator = other.id;
-		knockback_dir = sign(other.image_xscale);
-		knockback = 4;
-		image_xscale = 1;
-		image_yscale = 0.8;
+	//var _damage = instance_create_layer(x + xx,y + yy,"Damage",oDamage);
+	
+	// Create Damage for Punching
+	if(state = FighterStickMovePunch) {
+
+		FighterCreateDamage(48, 0, 0.75, 0.75, 4, 10);
+
+	}
+	
+	// Create Damage for Kicking
+	if(state = FighterStickMoveKick) {
+	
+		FighterCreateDamage(36, 8, 0.8, 0.8, 4, 10);
+	
 	}
 }
