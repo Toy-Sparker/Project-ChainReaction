@@ -1,0 +1,1 @@
+if(other.creator == id) hp -= Approach(hp,0,other.damage);
