@@ -63,14 +63,6 @@
             }
         },
         {
-            "Key": "10a6ea1d-f275-417d-96c1-51eb14de49f6",
-            "Value": {
-                "id": "62bd6a45-2c40-4748-baad-c2db2294693c",
-                "resourcePath": "sprites\\sFighterStickWall\\sFighterStickWall.yy",
-                "resourceType": "GMSprite"
-            }
-        },
-        {
             "Key": "131f3a75-b15d-4d6b-ae46-1a0abcc288d9",
             "Value": {
                 "id": "39aa5b83-9a5a-4f3c-926d-e273e045f0a7",
@@ -263,6 +255,14 @@
             }
         },
         {
+            "Key": "813a38ef-c3f2-4f4f-bece-9a00c9c87384",
+            "Value": {
+                "id": "bf29163f-1b03-44d7-b563-f47a817bbdce",
+                "resourcePath": "sprites\\sFighterStickWall\\sFighterStickWall.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "89d5b4e3-5890-4804-a291-0ad08e121a3a",
             "Value": {
                 "id": "4f67b107-ab6a-4be7-91e9-8cbbe36e14f7",
@@ -284,6 +284,14 @@
                 "id": "8433075b-d9d8-427b-848b-b36896e6fc4f",
                 "resourcePath": "scripts\\FighterStickStats\\FighterStickStats.yy",
                 "resourceType": "GMScript"
+            }
+        },
+        {
+            "Key": "a7e28059-00f4-49fb-ae50-18c62d20d2c7",
+            "Value": {
+                "id": "31078948-736c-420c-a742-9e938f91c193",
+                "resourcePath": "sprites\\sHitMarker\\sHitMarker.yy",
+                "resourceType": "GMSprite"
             }
         },
         {
@@ -324,6 +332,14 @@
                 "id": "9a08aa42-f2c9-4dc3-b447-dffad51eb265",
                 "resourcePath": "views\\c383171a-3512-4afd-93ee-276915fb7601.yy",
                 "resourceType": "GMFolder"
+            }
+        },
+        {
+            "Key": "c608fcd4-f7ad-4747-8f3b-ebe22c8710b6",
+            "Value": {
+                "id": "0fae40e6-5500-4468-b331-c70421dd1a35",
+                "resourcePath": "objects\\oFighter\\oFighter.yy",
+                "resourceType": "GMObject"
             }
         },
         {
@@ -388,6 +404,14 @@
                 "id": "7764851d-1726-401e-8857-33d7a0b26cd1",
                 "resourcePath": "fonts\\fMSGothic\\fMSGothic.yy",
                 "resourceType": "GMFont"
+            }
+        },
+        {
+            "Key": "e99f7b89-d86b-448f-8b12-9f0833a36f6b",
+            "Value": {
+                "id": "1a49ebb8-2b2b-4d89-8722-df34a4bd943b",
+                "resourcePath": "objects\\oHitMarker\\oHitMarker.yy",
+                "resourceType": "GMObject"
             }
         },
         {

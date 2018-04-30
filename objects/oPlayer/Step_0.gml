@@ -57,7 +57,7 @@ if(state == FighterStickStep) {
 		}
 	} else if(!onground) {
 		if(onwall != 0) {
-			sprite_index = sFighterStickAir;
+			sprite_index = sFighterStickWall;
 			image_xscale = onwall;
 		} else {
 			sprite_index = sFighterStickAir;

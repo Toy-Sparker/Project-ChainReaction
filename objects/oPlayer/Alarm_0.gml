@@ -1,5 +1,6 @@
 /// @desc Create Damage
 if(state != FighterStickStep) {	
+
 	// Create Damage for Punching
 	if(state = FighterStickMovePunch) {
 		FighterCreateDamage(48, 0, 0.75, 0.75, 4, 10);
@@ -17,10 +18,9 @@ if(state != FighterStickStep) {
 	if(state = FighterStickSpecial1) {
 		
 		// Left
-		FighterCreateDamage(-36, 0, 1, 1, 12, 30);
+		FighterCreateDamage(-42, 0, 1.2, 1, 12, 30);
 		
 		// Right
-		FighterCreateDamage(36, 0, 1, 1, 12, 30);
+		FighterCreateDamage(42, 0, 1.2, 1, 12, 30);
 	}
-	
 }
