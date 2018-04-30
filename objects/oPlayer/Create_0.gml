@@ -1,8 +1,10 @@
 hsp = 0;
 vsp = 0;
-onground = 0;
+onground = false;
 onwall = 0;
-grav = 0.3;
+grav = 0.4;
+grav_wall = 0.3;
 grav_max = 9;
-jump_wall_spd = 32;
+grav_wall_max = 5;
+special_delay = 0;
 FighterStickStats();

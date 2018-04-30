@@ -8,3 +8,12 @@ if(image_index >= 1) {
 }
 
 sprite_index = sFighterStickAerialPunch;
+
+if(image_index >= 3) {
+	// Destroy Damage object as moves
+	with(oDamage) {
+		if(creator = other.id) {
+			instance_destroy();
+		}
+	}	
+}

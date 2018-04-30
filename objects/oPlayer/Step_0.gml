@@ -8,46 +8,83 @@ key_kick = keyboard_check_pressed(vk_down);
 
 #endregion
 
-move_side = key_right - key_left;
+#region Calculating Movement 
 
-hsp = clamp(hsp,-spd,spd);
+// Horizontal
+jump_wall_delay = max(jump_wall_delay-1,0);
+
+if(jump_wall_delay == 0) {
+	var move_side = key_right - key_left;
+	
+	if(state = FighterStickStep) {
+		hsp += acc * move_side;
+	}
+	
+	hsp = clamp(hsp,-spd,spd);
+	hsp = Approach(hsp,0,fric);
+}
+
+// Vertical
+var grv_final = grav;
+var vsp_max_final = grav_max;
+
+if(onwall != 0) && (vsp > 0) {
+	grv_final = grav_wall;
+	vsp_max_final = grav_wall_max;
+}
 vsp += grav;
-vsp = clamp(vsp,-grav_max,grav_max);
-
-FighterCollide();
-
-#region Ground & Wall 
+vsp = clamp(vsp,-vsp_max_final,vsp_max_final);
 
 onground = place_meeting(x,y+1,parCollide);
-onwall = place_meeting(x+1,y,parCollide);
+onwall = place_meeting(x+1,y,parCollide) - place_meeting(x-1,y,parCollide);
+
+
+
+FighterCollide();
 
 #endregion
 
 #region Image Control
 
-if(state = FighterStickStep) {
-	if(hsp != 0) image_speed = 1; else image_speed = 0;
-	if(!onground) sprite_index = sFighterStickAir;
-} else {
-image_speed = 1; 
+if(state == FighterStickStep) {
+
+	if(onground) {
+		sprite_index = sFighterStickWalk;
+		if(hsp != 0) {
+			image_speed = 1;
+		} else {
+			image_speed = 0;
+		}
+	} else if(!onground) {
+		if(onwall != 0) {
+			sprite_index = sFighterStickAir;
+			image_xscale = onwall;
+		} else {
+			sprite_index = sFighterStickAir;
+			image_speed = 0;
+		}	
+	}
 }
 
-if(hsp > 0) image_xscale = 1;
-if(hsp < 0) image_xscale = -1;
+if(hsp != 0) image_xscale = sign(hsp);
  
 #endregion 
 
 #region Take Damage
 
+FighterTakeDamage();
 
+#endregion
+
+#region Special Control
+
+FighterStickCallSpecials();
+if(special_delay > 0) special_delay=max(special_delay-1,0);
 
 #endregion
 
 // Execute State
 script_execute(state);
-
-// Decelerate
-hsp = Approach(hsp,0,fric);
 
 // Restart game
 if(keyboard_check_pressed(ord("R"))) game_restart();

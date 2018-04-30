@@ -2,10 +2,4 @@
 if(state = FighterStickMovePunch) state = FighterStickStep;
 if(state = FighterStickMoveKick) state = FighterStickStep;
 if(state = FighterStickMoveAerialPunch) state = FighterStickStep;
-
-// Destroy Damage object as moves
-with(oDamage) {
-	if(creator = other.id) {
-		instance_destroy();
-	}
-}
+if(state = FighterStickSpecial1) state = FighterStickStep;

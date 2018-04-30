@@ -1,14 +1,16 @@
-#region Calculating speeds
-
-hsp += acc * move_side;
-
-#endregion
-
-#region Check for jumping/walljumping
+#region Check for jumping
 if(onground) {
 	if(key_jump) vsp -= jump_spd;
-} else {
 }
+
+#region Wall Jump
+
+if(onwall != 0) && (!onground) && (key_jump) {
+	jump_wall_delay = jump_wall_delay_max;
+	hsp = -onwall * jump_wall_hsp;
+	vsp -= jump_wall_vsp;
+}
+#endregion
 
 #endregion
 
@@ -17,5 +19,3 @@ if(onground) {
 FighterStickCallMoves();
 
 #endregion
-
-sprite_index = sFighterStickWalk;
