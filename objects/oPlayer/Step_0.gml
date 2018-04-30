@@ -1,8 +1,12 @@
+#region Key & Input
+
 key_left = keyboard_check_direct(ord("A"));
 key_right = keyboard_check_direct(ord("D"));
 key_jump = keyboard_check_pressed(vk_space);
 key_punch = keyboard_check_pressed(vk_up);
 key_kick = keyboard_check_pressed(vk_down);
+
+#endregion
 
 move_side = key_right - key_left;
 
@@ -12,17 +16,25 @@ vsp = clamp(vsp,-grav_max,grav_max);
 
 FighterCollide();
 
+#region Ground & Wall 
+
+onground = place_meeting(x,y+1,parCollide);
+onwall = place_meeting(x+1,y,parCollide);
+
+#endregion
+
 #region Image Control
 
 if(state = FighterStickStep) {
 	if(hsp != 0) image_speed = 1; else image_speed = 0;
+	if(!onground) sprite_index = sFighterStickAir;
 } else {
 image_speed = 1; 
 }
 
 if(hsp > 0) image_xscale = 1;
 if(hsp < 0) image_xscale = -1;
-
+ 
 #endregion 
 
 #region Take Damage

@@ -4,10 +4,10 @@ hsp += acc * move_side;
 
 #endregion
 
-#region Check ground for jumping
-
-if(place_meeting(x,y+1,parCollide)) {
+#region Check for jumping/walljumping
+if(onground) {
 	if(key_jump) vsp -= jump_spd;
+} else {
 }
 
 #endregion
